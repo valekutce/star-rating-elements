@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url(./images/img.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 24px;
+    font-size: 1.7em;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.emoji-container {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.emoji {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.emoji span {
+    font-size: 4.5em;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+}
+
+.card.two .emoji {
+    transform: translateX(-100px);
+}
+
+.card.three .emoji {
+    transform: translateX(-200px);
+}
+
+.card.four .emoji {
+    transform: translateX(-300px);
+}
+
+.card.five .emoji {
+    transform: translateX(-400px);
+}
+
+.stars {
+    margin: 20px auto 32px;
+}
+
+.stars i {
+    font-size: 1.7em;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #d1d4d4;
+    transition: color 0.4s;
+}
+
+.card.one .stars i:nth-child(-n+1) {
+    color: #ffdc64;
+}
+
+.card.two .stars i:nth-child(-n+2) {
+    color: #ffdc64;
+}
+
+.card.three .stars i:nth-child(-n+3) {
+    color: #ffdc64;
+}
+
+.card.four .stars i:nth-child(-n+4) {
+    color: #ffdc64;
+}
+
+.card.five .stars i:nth-child(-n+5) {
+    color: #ffdc64;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-size: 1.1em;
+    letter-spacing: 0.7px;
+    margin: 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    transition: opacity 0.5s;
+}
+
+button.secondary {
+    background-color: #fff;
+    color: #424242;
+    border: 1px solid #cfcfcf;
+}
+
+button.primary {
+    background-color: #fe8f20;
+    border: 1px solid #fe8f20;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.85;
+}

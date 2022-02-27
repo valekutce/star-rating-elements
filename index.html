@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Star rating feedback</title>
+</head>
+<body>
+    <div class="card four">
+        <p class="title">How was your journay ?</p>
+        <div class="emoji-container">
+            <div class="emoji">
+                <span>&#128534</span>
+                <span>&#128542</span>
+                <span>&#128528</span>
+                <span>&#129303</span>
+                <span>&#129321</span>
+            </div>
+        </div>
+
+        <div class="stars">
+            <i class="fas fa-star" id="one"></i>
+            <i class="fas fa-star" id="two"></i>
+            <i class="fas fa-star" id="three"></i>
+            <i class="fas fa-star" id="four"></i>
+            <i class="fas fa-star" id="five"></i>
+        </div>
+        <div class="actions">
+            <button class="secondary">No, later</button>
+            <button class="primary">Provide feedback</button>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.stars i');
+        const card = document.querySelector('.card');
+
+        stars.forEach(function(star) {
+            star.addEventListener('mouseover', function() {
+                card.className = `card ${this.id}`
+            })
+        })
+    </script>
+    
+</body>
+</html>
